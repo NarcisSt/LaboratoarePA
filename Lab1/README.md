@@ -16,6 +16,7 @@ Write a Java application that implements the following operations:
 - &#9745; Compute the sum of the digits in the result obtained in the previous step. This is the new result. While the new result has more than one digit, continue to sum the digits of the result.
 - &#9745; Display on the screen the message: "Willy-nilly, this semester I will learn " + languages[result].
 
+The checkboxes means that the problem was soveld.
 
 ### Example
 ```bash
@@ -41,6 +42,7 @@ Willy-nilly, this semester i will learn Java
 - &#9745; For larger n display the running time of the application in nanoseconds (DO NOT display the matrices). Try n > 30_000. You might want to adjust the JVM Heap Space using the VM options -Xms4G -Xmx4G.
 - &#9745; Launch the application from the command line, for example: java Lab1 100.
 
+The checkboxes means that the problem was soveld.
 
 ### Compile:
 
@@ -92,6 +94,8 @@ The application execution time in nanoseconds is: 21758900
 
 - &#9745; Implement an efficient algorithm that generates a random rooted tree. Create and display a textual representation of the tree, for example:
 
+The checkboxes means that the problem was soveld.
+
 ```bash
 +node0
   +node1
@@ -100,7 +104,6 @@ The application execution time in nanoseconds is: 21758900
     -node4
     -node5
 ```
-
 
 
 ### Example
