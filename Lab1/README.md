@@ -13,6 +13,7 @@ Write a Java application that implements the following operations:
     - &#9745; add the binary number 10101 to the result;
     - &#9745; add the hexadecimal number FF to the result;
     - &#9745; multiply the result by 6;
+
 - &#9745; Compute the sum of the digits in the result obtained in the previous step. This is the new result. While the new result has more than one digit, continue to sum the digits of the result.
 - &#9745; Display on the screen the message: "Willy-nilly, this semester I will learn " + languages[result].
 
