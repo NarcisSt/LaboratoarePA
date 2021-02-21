@@ -5,18 +5,17 @@ Author: Barat Narcis Stefan
 ##Compulsory
 
 Write a Java application that implements the following operations:
-- <span style="color: green">Display on the screen the message "Hello World!". Run the application. If it works, go to step 2 :)</span>
-- <span style="color: green">Define an array of strings languages, containing {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"}</span>
-- <span style="color: green">Generate a random integer n: int n = (int) (Math.random() * 1_000_000);</span>
-  -<span style="color: green">Compute the result obtained after performing the following calculations:</span>
-    - <span style="color: green">multiply n by 3;</span>
-    - <span style="color: green">add the binary number 10101 to the result;</span>
-    - <span style="color: green">add the hexadecimal number FF to the result;</span>
-    - <span style="color: green">multiply the result by 6;</span>
-- <span style="color: green">Compute the sum of the digits in the result obtained in the previous step. This is the new result. While the new result has more than one digit, continue to sum the digits of the result.</span>
-- <span style="color: green">Display on the screen the message: "Willy-nilly, this semester I will learn " + languages[result].</span>
+- [x]Display on the screen the message "Hello World!". Run the application. If it works, go to step 2 :)
+- [x]Define an array of strings languages, containing {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"}
+- [x]Generate a random integer n: int n = (int) (Math.random() * 1_000_000);
+  -[x]Compute the result obtained after performing the following calculations:
+    - [x]multiply n by 3;
+    - [x]add the binary number 10101 to the result;
+    - [x]add the hexadecimal number FF to the result;
+    - [x]multiply the result by 6;
+- [x]Compute the sum of the digits in the result obtained in the previous step. This is the new result. While the new result has more than one digit, continue to sum the digits of the result.
+- [x]Display on the screen the message: "Willy-nilly, this semester I will learn " + languages[result].
 
-The green line means that those problems was solved.
 
 ### Example
 ```bash
@@ -34,15 +33,14 @@ Willy-nilly, this semester i will learn Java
 
 ## Optional
 
-- <span style="color: green">Let n be an integer given as a command line argument. Validate the argument!</span>
-- <span style="color: green">Create a n x n matrix, representing the adjacency matrix of a random graph.</span>
-- <span style="color: green">Display on the screen the generated matrix (you might want to use the geometric shapes from the Unicode chart to create a "pretty" representation of the matrix).</span>
-- <span style="color: green">Verify if the generated graph is connected and display the connected components (if it is not).</span>
-- <span style="color: green">Assuming that the generated graph is connected, implement an algorithm that creates a partial tree of the graph. Display the adjacency matrix of the tree.</span>
-- <span style="color: green">For larger n display the running time of the application in nanoseconds (DO NOT display the matrices). Try n > 30_000. You might want to adjust the JVM Heap Space using the VM options -Xms4G -Xmx4G.</span>
-- <span style="color: green">Launch the application from the command line, for example: java Lab1 100.</span>
+- [x]Let n be an integer given as a command line argument. Validate the argument!
+- [x]Create a n x n matrix, representing the adjacency matrix of a random graph.
+- [x]Display on the screen the generated matrix (you might want to use the geometric shapes from the Unicode chart to create a "pretty" representation of the matrix).
+- [x]Verify if the generated graph is connected and display the connected components (if it is not).
+- [x]Assuming that the generated graph is connected, implement an algorithm that creates a partial tree of the graph. Display the adjacency matrix of the tree.
+- [x]For larger n display the running time of the application in nanoseconds (DO NOT display the matrices). Try n > 30_000. You might want to adjust the JVM Heap Space using the VM options -Xms4G -Xmx4G.
+- [x]Launch the application from the command line, for example: java Lab1 100.
 
-The green line means that those problems was solved.
 
 ### Compile:
 
@@ -92,7 +90,7 @@ The application execution time in nanoseconds is: 21758900
 
 ##Bonus
 
-- <span style="color: green"> Implement an efficient algorithm that generates a random rooted tree. Create and display a textual representation of the tree, for example:</span>
+- [x] Implement an efficient algorithm that generates a random rooted tree. Create and display a textual representation of the tree, for example:
 
 ```bash
 +node0
@@ -103,7 +101,7 @@ The application execution time in nanoseconds is: 21758900
     -node5
 ```
 
-The green line means that those problems was solved.
+
 
 ### Example
 ```bash
