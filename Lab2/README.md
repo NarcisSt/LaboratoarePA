@@ -34,6 +34,10 @@ sources=[Source{name='s1', type=FACTORY}, Source{name='S2', type=WAREHOUSE}, Sou
 destinations=[Destination{name='D1'}, Destination{name='D2'}, Destination{name='D3'}]
 supply=[10, 35, 25]
 demand=[20, 25, 25]
-cost=[[I@1b6d3586, [I@4554617c, [I@74a14482]}
+cost=
+2 3 1 
+5 4 8 
+5 6 8 
+}
 
 ```
