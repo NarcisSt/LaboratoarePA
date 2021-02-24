@@ -2,7 +2,7 @@
 
 Author: Barat Narcis Stefan
 
-##Compulsory
+## Compulsory
 
 Write a Java application that implements the following operations:
 - &#9745; Display on the screen the message "Hello World!". Run the application. If it works, go to step 2 :)
@@ -90,7 +90,7 @@ The adjacency matrix of the partial tree:
 The application execution time in nanoseconds is: 21758900
 ```
 
-##Bonus
+## Bonus
 
 - &#9745; Implement an efficient algorithm that generates a random rooted tree. Create and display a textual representation of the tree, for example:
 
