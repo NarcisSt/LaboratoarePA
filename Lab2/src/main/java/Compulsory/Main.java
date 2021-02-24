@@ -37,7 +37,6 @@ public class Main {
                 {5, 4, 8},
                 {5, 6, 8}
         });
-        problem.getCost();
 
         System.out.println(problem);
 
