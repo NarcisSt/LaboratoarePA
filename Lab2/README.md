@@ -23,21 +23,18 @@ The checkboxes means that the problem was soveld.
 
 ### Example
 ```bash
-Source{name='s1', type=FACTORY}
+Source{name='S1', type=FACTORY}
 Source{name='S2', type=WAREHOUSE}
 Source{name='S3', type=WAREHOUSE}
 Destination{name='D1'}
 Destination{name='D2'}
 Destination{name='D3'}
 Problem{
-sources=[Source{name='s1', type=FACTORY}, Source{name='S2', type=WAREHOUSE}, Source{name='S3', type=WAREHOUSE}]
+sources=[Source{name='S1', type=FACTORY}, Source{name='S2', type=WAREHOUSE}, Source{name='S3', type=WAREHOUSE}]
 destinations=[Destination{name='D1'}, Destination{name='D2'}, Destination{name='D3'}]
 supply=[10, 35, 25]
 demand=[20, 25, 25]
-cost=
-2 3 1 
-5 4 8 
-5 6 8 
+cost=[[2, 3, 1], [5, 4, 8], [5, 6, 8]]}
 }
 
 ```
