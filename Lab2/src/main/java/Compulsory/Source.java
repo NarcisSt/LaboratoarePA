@@ -1,5 +1,10 @@
 package Compulsory;
 
+/**
+ * @author Barat Narcis Stefan
+ * In this class i am defying the Sources, with the appropiate setters, getters and constructors.
+ */
+
 public class Source {
 
     private String name;

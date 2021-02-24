@@ -2,6 +2,11 @@ package Compulsory;
 
 import java.util.Arrays;
 
+/**
+ * @author Barat Narcis Stefan
+ * In this class i am defying the problem data, with the appropiate setters, getters and constructors.
+ */
+
 public class Problem {
 
     private Source[] sources;

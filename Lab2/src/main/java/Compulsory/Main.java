@@ -1,6 +1,8 @@
 package Compulsory;
 
-import sun.security.krb5.internal.crypto.Des;
+/**
+ * @author Barat Narcis Stefan
+ */
 
 public class Main {
 
