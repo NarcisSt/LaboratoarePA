@@ -1,5 +1,10 @@
 package Compulsory;
 
+/**
+ * @author Barat Narcis Stefan
+ * In this class i am defying the Destinations, with the appropiate setters, getters and constructors.
+ */
+
 public class Destination {
 
     private String name;
