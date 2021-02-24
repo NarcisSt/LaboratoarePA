@@ -10,7 +10,7 @@ public class Main {
 
         Problem problem = new Problem();
 
-        Source s1 = new Source("s1", SourceType.FACTORY);
+        Source s1 = new Source("S1", SourceType.FACTORY);
         System.out.println(s1);
 
         Source s2 = new Source("S2", SourceType.WAREHOUSE);
