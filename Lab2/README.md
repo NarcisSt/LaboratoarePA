@@ -35,4 +35,5 @@ destinations=[Destination{name='D1'}, Destination{name='D2'}, Destination{name='
 supply=[10, 35, 25]
 demand=[20, 25, 25]
 cost=[[I@1b6d3586, [I@4554617c, [I@74a14482]}
+
 ```
