@@ -57,26 +57,26 @@ public class Problem {
         this.cost = cost;
     }
 
-    /**
-     * Method that displays the costs matrix.
-     * @param cost is the matrix of costs
-     * @return a friendly appearance of the matrix
-     */
-
-    public String displayCost(int[][] cost){
-        String output = "";
-
-        for (int i = 0; i < cost.length; i++) {
-
-            for (int j = 0; j < cost.length; j++) {
-                output = output.concat(cost[i][j] + " ");
-            }
-
-            output += System.lineSeparator();
-        }
-
-        return output;
-    }
+//    /**
+//     * Method that displays the costs matrix.
+//     * @param cost is the matrix of costs
+//     * @return a friendly appearance of the matrix
+//     */
+//
+//    public String displayCost(int[][] cost){
+//        String output = "";
+//
+//        for (int i = 0; i < cost.length; i++) {
+//
+//            for (int j = 0; j < cost.length; j++) {
+//                output = output.concat(cost[i][j] + " ");
+//            }
+//
+//            output += System.lineSeparator();
+//        }
+//
+//        return output;
+//    }
 
     @Override
     public String toString() {
@@ -86,7 +86,8 @@ public class Problem {
                 "destinations=" + Arrays.toString(destinations) + System.lineSeparator() +
                 "supply=" + Arrays.toString(supply) + System.lineSeparator() +
                 "demand=" + Arrays.toString(demand) + System.lineSeparator() +
-                "cost=" + System.lineSeparator() + displayCost(cost) +
+//                "cost=" + System.lineSeparator() + displayCost(cost) +
+                "cost=" + Arrays.deepToString(cost) +
                 '}';
     }
 }
