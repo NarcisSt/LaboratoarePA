@@ -1,11 +1,17 @@
-package Optional;
+package OptionalAndBonus;
 
-import java.util.Objects;
+/**
+ * The Destination class describe the destinations, which have a name.
+ */
 
 public class Destination {
-
     private String name;
 
+    /**
+     * Constructor to give a name to a destination.
+     *
+     * @param name String : name of the destination
+     */
     public Destination(String name) {
         this.name = name;
     }
