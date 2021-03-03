@@ -32,7 +32,7 @@ Hello world!
 Willy-nilly, this semester i will learn Java
 ```
 
-## Optional
+## OptionalAndBonus
 
 - &#9745; Let n be an integer given as a command line argument. Validate the argument!
 - &#9745; Create a n x n matrix, representing the adjacency matrix of a random graph.
@@ -56,13 +56,13 @@ javac -d "classes" -classpath "classes" Main.java
 
 ### Execute
 ```bash
-java -classpath "classes" Optional.Main 4
-java -Xms4G -Xmx4G -classpath "classes" Optional.Main 30000
+java -classpath "classes" OptionalAndBonus.Main 4
+java -Xms4G -Xmx4G -classpath "classes" OptionalAndBonus.Main 30000
 ```
 
 ### Example
 ```bash
-java -classpath "classes" Optional.Main 4
+java -classpath "classes" OptionalAndBonus.Main 4
 
 The adjacency matrix of the graph:
 0 0 1 1

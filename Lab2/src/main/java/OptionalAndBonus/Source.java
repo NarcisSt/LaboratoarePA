@@ -1,9 +1,10 @@
-package Optional;
+package OptionalAndBonus;
 
-import java.util.Objects;
+/**
+ * The Source class describes the sources, this class extends the Factory and Warehouse classes, so an object of type Source can have a name and can be a Factory or a Warehouse.
+ */
 
 public abstract class Source {
-
     protected String name;
 
     public String getName() {
@@ -13,8 +14,6 @@ public abstract class Source {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Source() { }
 
     @Override
     public String toString() {
