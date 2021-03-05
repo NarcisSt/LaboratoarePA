@@ -15,7 +15,7 @@ public class Warehouse extends Source {
         this.name = name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 

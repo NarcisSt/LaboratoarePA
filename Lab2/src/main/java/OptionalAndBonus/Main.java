@@ -8,7 +8,6 @@ package OptionalAndBonus;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-
         PerformanceTest test = new PerformanceTest();
 
         test.startPerformanceTest();
@@ -22,8 +21,5 @@ public class Main {
         test.endPerformanceTest();
         test.displayPerformanceTime();
         test.displayMemoryUsage();
-
-
-
     }
 }

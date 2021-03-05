@@ -1,4 +1,4 @@
-package OptionalAndBonus;
+package Optional;
 
 import java.io.IOException;
 

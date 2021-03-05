@@ -1,4 +1,4 @@
-package OptionalAndBonus;
+package Optional;
 
 import java.util.ArrayList;
 import java.util.HashMap;

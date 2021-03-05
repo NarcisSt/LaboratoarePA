@@ -1,4 +1,4 @@
-package OptionalAndBonus;
+package Optional;
 
 /**
  * @author Barat Narcis Stefan
