@@ -3,6 +3,9 @@ package Compulsory;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Restaurant that extends the class Location and implements the Visitable and Classifiable interfaces, with constructors, getters and setters, and the methods from Object class.
+ */
 public class Restaurant extends Location implements Visitable, Classifiable{
 
     private LocalTime openingTime, closingTime;

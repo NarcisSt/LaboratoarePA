@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The abstract class Location which is extended by Church, Hotel, Museum and Restaurant classes.
+ */
 public abstract class Location {
 
     protected String name;
@@ -34,6 +37,9 @@ public abstract class Location {
         this.name = name;
     }
 
+    /**
+     * Method that displays the list of costs between locations.
+     */
     public void displayCosts(){
         for (Map.Entry<Location, Integer> entry : cost.entrySet()) {
             System.out.println(name + "->" + entry.getKey().name + ":" + entry.getValue());
