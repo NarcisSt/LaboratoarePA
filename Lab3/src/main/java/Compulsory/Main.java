@@ -4,6 +4,10 @@ import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The main class where i am instantiating the locations and the costs.
+ */
+
 public class Main {
     public static void main(String[] args) {
 

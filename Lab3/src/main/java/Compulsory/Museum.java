@@ -3,6 +3,9 @@ package Compulsory;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Museum that extends the class Location and implements the Visitable and Payable interfaces, with constructors, getters and setters, and the methods from Object class.
+ */
 public class Museum extends Location implements Visitable, Payable{
 
     private LocalTime openingTime, closingTime;
