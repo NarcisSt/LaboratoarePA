@@ -1,17 +1,14 @@
-package Compulsory;
+package Optional;
 
-import java.time.LocalTime;
+import Optional.Interfaces.Visitable;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * The abstract class Location which is extended by Church, Hotel, Museum and Restaurant classes.
- */
-public abstract class Location {
-
-    public String name;
-    public Map<Location, Integer> cost = new HashMap<>();
+public abstract class Location implements Visitable, Comparable<Location> {
+    protected String name;
+    protected Map<Location, Integer> cost = new HashMap<>();
 
     public Location() {
     }
@@ -40,7 +37,7 @@ public abstract class Location {
     /**
      * Method that displays the list of costs between locations.
      */
-    public void displayCosts(){
+    public void displayCosts() {
         for (Map.Entry<Location, Integer> entry : cost.entrySet()) {
             System.out.println(name + "->" + entry.getKey().name + ":" + entry.getValue());
         }
@@ -63,9 +60,14 @@ public abstract class Location {
     }
 
     public int compareTo(Location other) {
-            return this.name.compareTo(other.name);
+        if (this.getOpeningTime() != null && this.getClosingTime() != null) {
+            return this.getOpeningTime().compareTo(other.getOpeningTime());
+        } else {
+            new Exception("This location is not visitable");
+            return -1;
+        }
+        //not safe, check if name is null before
     }
-
 
     @Override
     public int hashCode() {
