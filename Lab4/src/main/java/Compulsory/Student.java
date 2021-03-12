@@ -2,6 +2,7 @@ package Compulsory;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * The Student class implements the Comparable interface and has the name of the student and a list of preferences regarding the schools.
@@ -30,5 +31,18 @@ public class Student implements Comparable<Student> {
         return "Student{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return Objects.equals(name, student.name) && Objects.equals(schoolPreferences, student.schoolPreferences);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, schoolPreferences);
     }
 }

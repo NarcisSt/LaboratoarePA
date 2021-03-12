@@ -14,6 +14,10 @@ public class Main {
                 .mapToObj(i -> new School("H" + i))
                 .toArray(School[]::new);
 
+        schools[0].setCapacity(4);
+        schools[1].setCapacity(3);
+        schools[2].setCapacity(3);
+
         Collections.sort(Arrays.asList(students));
 
         Map<Student, List<School>> stdPrefMap = new HashMap<>();
