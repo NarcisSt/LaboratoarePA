@@ -38,11 +38,11 @@ public class Student implements Comparable<Student> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return Objects.equals(name, student.name) && Objects.equals(schoolPreferences, student.schoolPreferences);
+        return Objects.equals(name, student.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, schoolPreferences);
+        return Objects.hash(name);
     }
 }
