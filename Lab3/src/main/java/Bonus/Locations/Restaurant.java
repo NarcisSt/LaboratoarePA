@@ -6,6 +6,9 @@ import Bonus.Location;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Restaurant that extends the class Location and implements the Classifiable, with constructors, getters and setters, and the methods from Object class.
+ */
 public class Restaurant extends Location implements Classifiable {
     private LocalTime openingTime, closingTime;
     private double rank;

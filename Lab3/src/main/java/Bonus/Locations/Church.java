@@ -5,6 +5,9 @@ import Bonus.Location;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Church that extends the class Location, with constructors, getters and setters, and the method toString from Object class.
+ */
 public class Church extends Location {
     private LocalTime openingTime, closingTime;
 

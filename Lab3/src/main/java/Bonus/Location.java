@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The abstract class Location which is extended by Church, Hotel, Museum and Restaurant classes and implements the Visitable and Comparable interfaces .
+ */
 public abstract class Location implements Visitable, Comparable<Location> {
     protected String name;
     protected Map<Location, Integer> cost = new HashMap<>();

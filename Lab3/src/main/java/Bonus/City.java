@@ -9,6 +9,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Class City describes the city with all the locations.
+ */
 public class City {
     public List<Location> nodes = new ArrayList<>();
 

@@ -6,6 +6,9 @@ import Bonus.Location;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Museum that extends the class Location and implements the Payable interface, with constructors, getters and setters, and the methods from Object class.
+ */
 public class Museum extends Location implements Payable {
     private LocalTime openingTime, closingTime;
     private double ticketPrice;
