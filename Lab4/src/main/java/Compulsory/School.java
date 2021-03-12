@@ -1,5 +1,6 @@
 package Compulsory;
 
+import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -10,9 +11,27 @@ import java.util.TreeSet;
 public class School implements Comparable<School> {
     private String name;
     private Set<Student> studentsPreferences = new TreeSet<>();
+    private int capacity;
 
     public School(String name) {
         this.name = name;
+    }
+
+    public School(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        if (capacity >= 0) {
+            this.capacity = capacity;
+        }else {
+            new Exception("Capacity must be at least 0");
+        }
     }
 
     @Override
@@ -29,6 +48,20 @@ public class School implements Comparable<School> {
     public String toString() {
         return "School{" +
                 "name='" + name + '\'' +
+                ", capacity=" + capacity +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        School school = (School) o;
+        return Objects.equals(name, school.name) && Objects.equals(studentsPreferences, school.studentsPreferences);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, studentsPreferences);
     }
 }
