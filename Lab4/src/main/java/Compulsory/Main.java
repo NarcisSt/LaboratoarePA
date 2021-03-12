@@ -1,5 +1,6 @@
 package Compulsory;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.util.*;
 import java.util.stream.IntStream;
 
@@ -33,22 +34,22 @@ public class Main {
         schPrefMap.put(schools[1], Arrays.asList(students[0], students[2], students[1]));
         schPrefMap.put(schools[2], Arrays.asList(students[0], students[1], students[3]));
 
-        for (Map.Entry<Student, List<School>> node : stdPrefMap.entrySet()) {
-            System.out.print(node.getKey() + " - ");
-            for (School school : node.getValue()) {
-                System.out.print(school + " ");
-            }
-            System.out.println();
-        }
+//        for (Map.Entry<Student, List<School>> node : stdPrefMap.entrySet()) {
+//            System.out.print(node.getKey() + " - ");
+//            for (School school : node.getValue()) {
+//                System.out.print(school + " ");
+//            }
+//            System.out.println();
+//        }
+        System.out.println(stdPrefMap);
 
-        System.out.println();
-
-        for (Map.Entry<School, List<Student>> node : schPrefMap.entrySet()) {
-            System.out.print(node.getKey() + " - ");
-            for (Student student : node.getValue()) {
-                System.out.print(student + " ");
-            }
-            System.out.println();
-        }
+//        for (Map.Entry<School, List<Student>> node : schPrefMap.entrySet()) {
+//            System.out.print(node.getKey() + " - ");
+//            for (Student student : node.getValue()) {
+//                System.out.print(student + " ");
+//            }
+//            System.out.println();
+//        }
+        System.out.println(schPrefMap);
     }
 }

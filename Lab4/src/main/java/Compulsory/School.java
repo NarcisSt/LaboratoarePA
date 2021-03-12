@@ -29,7 +29,7 @@ public class School implements Comparable<School> {
     public void setCapacity(int capacity) {
         if (capacity >= 0) {
             this.capacity = capacity;
-        }else {
+        } else {
             new Exception("Capacity must be at least 0");
         }
     }
@@ -57,11 +57,12 @@ public class School implements Comparable<School> {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         School school = (School) o;
-        return Objects.equals(name, school.name) && Objects.equals(studentsPreferences, school.studentsPreferences);
+        return Objects.equals(name, school.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, studentsPreferences);
+        return Objects.hash(name);
     }
 }
+
