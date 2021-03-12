@@ -2,8 +2,11 @@ package Optional;
 
 import Optional.Locations.*;
 
-
 import java.util.*;
+
+/**
+ * Class City describes the city with all the locations.
+ */
 
 public class City {
     public List<Location> nodes = new ArrayList<>();

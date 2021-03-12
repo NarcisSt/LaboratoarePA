@@ -7,6 +7,9 @@ import Optional.Location;
 import java.time.LocalTime;
 import java.util.Map;
 
+/**
+ * Class Hotel that extends the class Location and implements the Classifiable interface, with constructors, getters and setters, and the methods from Object class.
+ */
 public class Hotel extends Location implements Classifiable {
     private LocalTime openingTime, closingTime;
     private double rank;
