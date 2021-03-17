@@ -3,10 +3,7 @@ package Optional.Program;
 import Optional.Entities.School;
 import Optional.Entities.Student;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
     private Problem problem;
@@ -32,7 +29,7 @@ public class Solution {
                             if (count == 0) {
                                 break;
                             }
-                            if(assignedStudents.size() == problem.getStudents().length){
+                            if (assignedStudents.size() == problem.getStudents().length) {
                                 return;
                             }
                         }
@@ -48,4 +45,16 @@ public class Solution {
         }
     }
 
+    public void displayStudentsWhoAcceptSchools(School[] schools) {
+        List<School> target = Arrays.asList(schools);
+        Arrays.asList(problem.getStudents()).stream()
+                .filter(std -> std.getSchoolPreferences().containsAll(target))
+                .forEach(System.out::println);
+    }
+
+    public void displaySchoolsWhoAcceptStudents(Student student){
+        Arrays.asList(problem.getSchools()).stream()
+                .filter(sch -> sch.getStudentsPreferences().stream().findFirst().get() == student)
+                .forEach(System.out::println);
+    }
 }

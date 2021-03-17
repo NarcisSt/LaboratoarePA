@@ -38,6 +38,8 @@ public class Main {
 
         solution.createMatching();
         solution.displaySolution();
+        solution.displayStudentsWhoAcceptSchools(new School[]{schools[1], schools[0]});
+        solution.displaySchoolsWhoAcceptStudents(students[3]);
 
     }
 }
