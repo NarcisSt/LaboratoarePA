@@ -11,9 +11,15 @@ import java.util.Objects;
 public class Student implements Comparable<Student> {
     private String name;
     private List<School> schoolPreferences = new LinkedList<>();
+    private int score;
 
     public Student(String name) {
         this.name = name;
+    }
+
+    public Student(String name, int score) {
+        this.name = name;
+        this.score = score;
     }
 
     public String getName() {
@@ -32,6 +38,14 @@ public class Student implements Comparable<Student> {
         this.schoolPreferences = schoolPreferences;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     @Override
     public int compareTo(Student student) {
         if (this.name != null) {
@@ -46,6 +60,7 @@ public class Student implements Comparable<Student> {
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
+                ", score=" + score +
                 '}';
     }
 

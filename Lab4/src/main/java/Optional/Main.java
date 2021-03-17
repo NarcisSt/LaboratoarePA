@@ -4,19 +4,21 @@ import Optional.Entities.School;
 import Optional.Entities.Student;
 import Optional.Program.Problem;
 import Optional.Program.Solution;
+import com.github.javafaker.Faker;
 
 import java.util.*;
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
+        Faker faker = new Faker();
 
         Student[] students = IntStream.rangeClosed(0, 3)
-                .mapToObj(i -> new Student("S" + i))
+                .mapToObj(i -> new Student(faker.name().fullName(), faker.number().numberBetween(0, 100)))
                 .toArray(Student[]::new);
 
         School[] schools = IntStream.rangeClosed(0, 2)
-                .mapToObj(i -> new School("H" + i))
+                .mapToObj(i -> new School(faker.name().firstName() + " school"))
                 .toArray(School[]::new);
 
         schools[0].setCapacity(1);
@@ -36,10 +38,13 @@ public class Main {
 
         Solution solution = new Solution(problem);
 
-        solution.createMatching();
-        solution.displaySolution();
+        solution.createMatchingWithoutScore();
+        solution.displaySolution(false);
         solution.displayStudentsWhoAcceptSchools(new School[]{schools[1], schools[0]});
         solution.displaySchoolsWhoAcceptStudents(students[3]);
+
+        solution.createMatchingWithScore();
+        solution.displaySolution(true);
 
     }
 }
