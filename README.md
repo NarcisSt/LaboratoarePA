@@ -5,3 +5,4 @@
 - Lab 2 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab2)
 - Lab 3 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab3)
 - Lab 4 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab4)
+- Lab 5 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab5)
