@@ -8,6 +8,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+
+/**
+ * The class Song extends class BaseItem, a song have an author.
+ */
 public class Song extends BaseItem {
     private String author;
 

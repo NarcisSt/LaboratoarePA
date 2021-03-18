@@ -6,6 +6,10 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
+
+/**
+ * The class Book extends class BaseItem, a song have a ISBN.
+ */
 public class Book extends BaseItem {
     private String ISBN;
 

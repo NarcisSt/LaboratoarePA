@@ -18,7 +18,7 @@ public class Main {
                 .toArray(Student[]::new);
 
         School[] schools = IntStream.rangeClosed(0, 2)
-                .mapToObj(i -> new School(faker.name().firstName() + " school"))
+                .mapToObj(i -> new School(faker.name().lastName() + " school"))
                 .toArray(School[]::new);
 
         schools[0].setCapacity(1);
@@ -38,13 +38,17 @@ public class Main {
 
         Solution solution = new Solution(problem);
 
+        System.out.println();
         solution.createMatchingWithoutScore();
         solution.displaySolution(false);
-        solution.displayStudentsWhoAcceptSchools(new School[]{schools[1], schools[0]});
-        solution.displaySchoolsWhoAcceptStudents(students[3]);
 
+        System.out.println();
         solution.createMatchingWithScore();
         solution.displaySolution(true);
+
+        System.out.println();
+        solution.displayStudentsWhoAcceptSchools(new School[]{schools[1], schools[0]});
+        solution.displaySchoolsWhoAcceptStudents(students[3]);
 
     }
 }

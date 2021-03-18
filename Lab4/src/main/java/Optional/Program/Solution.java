@@ -6,6 +6,9 @@ import Optional.Entities.Student;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * The Solution class gives a solution to an instance of the Problem class.
+ */
 public class Solution {
     private Problem problem;
 
@@ -17,6 +20,9 @@ public class Solution {
 
     Map<Student, School> pairs;
 
+    /**
+     * The method creates a solution, but only taking in consideration the preferences of the students and of the schools.
+     */
     public void createMatchingWithoutScore() {
         assignedStudents = new ArrayList<>();
         pairs = new HashMap<>();
@@ -43,6 +49,9 @@ public class Solution {
         }
     }
 
+    /**
+     * Method that creates a solution, but by the score of the students.
+     */
     public void createMatchingWithScore() {
         assignedStudents = new ArrayList<>();
         pairs = new HashMap<>();
@@ -71,6 +80,10 @@ public class Solution {
 
     }
 
+    /**
+     * Method that displays the solution
+     * @param showScore means what solution we want to display, if it s True, the solution with scores will pe displayed, else, the solution without score will be displayed.
+     */
     public void displaySolution(boolean showScore) {
         for (Map.Entry<Student, School> node : pairs.entrySet()) {
             if (showScore) {
@@ -82,6 +95,10 @@ public class Solution {
         }
     }
 
+    /**
+     * Method that displays, using a query, all the students who wants to go to the schools from the list(the students who find acceptable a given list of schools).
+     * @param schools a list of schools
+     */
     public void displayStudentsWhoAcceptSchools(School[] schools) {
         List<School> target = Arrays.asList(schools);
         Arrays.asList(problem.getStudents()).stream()
@@ -89,6 +106,10 @@ public class Solution {
                 .forEach(System.out::println);
     }
 
+    /**
+     * Method that displays, using a query, the schools that have this student as their top preference
+     * @param student a student
+     */
     public void displaySchoolsWhoAcceptStudents(Student student) {
         Arrays.asList(problem.getSchools()).stream()
                 .filter(sch -> sch.getStudentsPreferences().stream().findFirst().get() == student)
