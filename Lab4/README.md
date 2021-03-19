@@ -49,3 +49,21 @@ Student{name='Dorotha Wolff Jr.', score=8}
 Student{name='Petrina Tromp', score=43}
 School{name='Donnelly school', capacity=1} 
 ```
+
+## Bonus
+- &#9745; Consider the case in which a school can rank the students based on their specific criteria.
+- &#9745; Implement the Gale Shapley algorithm in order to find a stable matching. 
+- Consider the case in which preferences are not necessarily strict. Some consecutive preferences in an element's list may form a tie.
+- For example S1: H1, [H2,H3] means that S1 prefers H1 over H2 and H3, but H2 and H3 have no precedence one over the other.
+- Prove that in the case of SAP with ties, a problem may have multiple stable matchings, not all of the same size.
+- Check out other examples of matching in practice.
+
+The checkedboxes means that the problem was solved.
+
+### Example
+```bash
+Miss Jarvis Kuvalis - Langosh school
+Dorotha Wolff Jr. - Schmitt school
+Petrina Tromp - Langosh school
+Ina Hodkiewicz - Donnelly school
+```

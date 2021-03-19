@@ -22,6 +22,7 @@ public class Solution {
 
     /**
      * The method creates a solution, but only taking in consideration the preferences of the students and of the schools.
+     * This method "deal" with first two points from the Optional part.
      */
     public void createMatchingWithoutScore() {
         assignedStudents = new ArrayList<>();

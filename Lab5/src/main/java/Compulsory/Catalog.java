@@ -71,7 +71,7 @@ public class Catalog {
     }
 
     /**
-     *
+     * This method loads the catalog from a file
      * @param loadPath the path to the file we want to load the catalog from
      */
     public void load(String loadPath) {
