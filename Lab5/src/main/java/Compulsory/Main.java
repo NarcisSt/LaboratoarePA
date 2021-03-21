@@ -2,7 +2,7 @@ package Compulsory;
 
 import Compulsory.Entities.Book;
 import Compulsory.Entities.Song;
-import Compulsory.Errors.IncorrectPathException;
+import Optional.Errors.IncorrectPathException;
 
 public class Main {
     public static void main(String[] args) throws IncorrectPathException {

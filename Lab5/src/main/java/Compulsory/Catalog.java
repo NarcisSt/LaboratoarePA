@@ -1,7 +1,7 @@
 package Compulsory;
 
 import Compulsory.Entities.BaseItem;
-import Compulsory.Errors.IncorrectPathException;
+import Optional.Errors.IncorrectPathException;
 
 import java.awt.*;
 import java.io.*;
