@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 
 /**
- * The class Movie extends class BaseItem, a song have a producer.
+ * The class Movie extends class BaseItem, a movie have a producer.
  */
 public class Movie extends BaseItem {
     private String producer;
