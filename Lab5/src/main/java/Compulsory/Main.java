@@ -2,9 +2,10 @@ package Compulsory;
 
 import Compulsory.Entities.Book;
 import Compulsory.Entities.Song;
+import Compulsory.Errors.IncorrectPathException;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IncorrectPathException {
         Catalog catalog =  new Catalog();
 
         Book book = new Book("Ion", "C:\\Users\\Narcis\\OneDrive\\Desktop\\Lab5PA\\Ion.txt", "232414");
@@ -20,5 +21,7 @@ public class Main {
         catalog.save("C:\\Users\\Narcis\\OneDrive\\Desktop\\Lab5PA\\save.txt");
         catalog.play(book);
         catalog.play(song);
+
+//        catalog.load("Z:\\Users\\Narcis\\OneDrive\\Desktop\\Lab5PA\\save.txt");
     }
 }

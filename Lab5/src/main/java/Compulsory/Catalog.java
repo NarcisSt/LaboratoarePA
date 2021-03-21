@@ -1,6 +1,7 @@
 package Compulsory;
 
 import Compulsory.Entities.BaseItem;
+import Compulsory.Errors.IncorrectPathException;
 
 import java.awt.*;
 import java.io.*;
@@ -15,6 +16,7 @@ public class Catalog {
 
     /**
      * Method that add a new item in the catalog
+     *
      * @param baseItem is an item
      */
     public void add(BaseItem baseItem) {
@@ -32,6 +34,7 @@ public class Catalog {
 
     /**
      * Method that plays an item from the catalog
+     *
      * @param baseItem is an item
      */
     public void play(BaseItem baseItem) {
@@ -50,9 +53,11 @@ public class Catalog {
 
     /**
      * This method saves the entire catalog in a file
+     *
      * @param savePath the path to the file we want to save the catalog in
      */
-    public void save(String savePath) {
+    public void save(String savePath) throws IncorrectPathException {
+
         try {
             FileOutputStream f = new FileOutputStream(savePath);
             ObjectOutputStream o = new ObjectOutputStream(f);
@@ -64,7 +69,7 @@ public class Catalog {
             o.close();
             f.close();
         } catch (FileNotFoundException e) {
-            System.out.println("File not found");
+            throw new IncorrectPathException("Incorrect path");
         } catch (IOException e) {
             System.out.println("Error initializing stream");
         }
@@ -72,29 +77,30 @@ public class Catalog {
 
     /**
      * This method loads the catalog from a file
+     *
      * @param loadPath the path to the file we want to load the catalog from
      */
-    public void load(String loadPath) {
+    public void load(String loadPath) throws IncorrectPathException {
         try {
 
             FileInputStream fis = new FileInputStream(loadPath);
-            boolean cont = true;
-            while (cont) {
-                try (ObjectInputStream input = new ObjectInputStream(fis)) {
+            try (ObjectInputStream input = new ObjectInputStream(fis)) {
+                while (input.readObject() != null) {
                     BaseItem obj = (BaseItem) input.readObject();
-                    if (obj != null) {
-                        items.add(obj);
-                    } else {
-                        cont = false;
-                    }
-                } catch (IOException e) {
-                    System.out.println("Error initializing stream");
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
+                    items.add(obj);
+                    System.out.println(obj.toString());
                 }
+            } catch (FileNotFoundException e) {
+                throw new IncorrectPathException("Incorrect path");
+            } catch (EOFException e) {
+                return;
+            } catch (IOException e) {
+                System.out.println("Error initializing stream");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
+        } catch (FileNotFoundException | IncorrectPathException e) {
+            throw new IncorrectPathException("Incorrect path");
         }
     }
 }
