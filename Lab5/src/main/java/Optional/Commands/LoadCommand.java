@@ -7,11 +7,19 @@ import lombok.AllArgsConstructor;
 import java.io.*;
 import java.util.List;
 
+/**
+ * Class LoadCommand extends the Command interface and overrides the execute() method.
+ */
 @AllArgsConstructor
 public class LoadCommand implements Command{
     private String path;
     private List<BaseItem> items;
 
+    /**
+     * Method overridden from the Command interface, which implements the load command.
+     *
+     * @throws IncorrectPathException if the path is incorrect
+     */
     @Override
     public void execute() throws IncorrectPathException {
         try {

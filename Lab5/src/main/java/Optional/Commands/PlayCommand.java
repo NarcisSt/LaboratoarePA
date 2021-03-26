@@ -8,11 +8,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Class PlayCommand extends the Command interface and overrides the execute() method.
+ */
 @AllArgsConstructor
 public class PlayCommand implements Command {
     private BaseItem baseItem;
     private List<BaseItem> items;
 
+    /**
+     * Method overridden from the Command interface, which implements the play command.
+     */
     @Override
     public void execute() {
         if (items.contains(baseItem) && baseItem != null) {

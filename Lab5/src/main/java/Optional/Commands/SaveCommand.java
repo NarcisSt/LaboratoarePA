@@ -10,11 +10,19 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
+/**
+ * Class SaveCommand extends the Command interface and overrides the execute() method.
+ */
 @AllArgsConstructor
 public class SaveCommand implements Command{
     private String path;
     private List<BaseItem> items;
 
+    /**
+     * Method overridden from the Command interface, which implements the save command.
+     *
+     * @throws IncorrectPathException if the path is incorrect
+     */
     @Override
     public void execute() throws IncorrectPathException {
         try {

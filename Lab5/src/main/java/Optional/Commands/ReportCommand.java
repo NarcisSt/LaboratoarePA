@@ -1,7 +1,6 @@
 package Optional.Commands;
 
 import Optional.BaseItem;
-import Optional.Main;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import lombok.AllArgsConstructor;
@@ -12,16 +11,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class Report extends the Command interface and overrides the execute() method.
+ */
 @AllArgsConstructor
 public class ReportCommand implements Command {
     private List<BaseItem> items;
 
+    /**
+     * Overridden method execute that call the createTemplate function
+     */
     @SneakyThrows
     @Override
     public void execute() {
         this.createTemplate();
     }
 
+    /**
+     * Method that create (and open) an HTML report representing the content of the catalog.
+     */
     @SneakyThrows
     private void createTemplate() {
         Configuration configuration = new Configuration();
