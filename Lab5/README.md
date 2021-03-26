@@ -15,3 +15,12 @@ Write an application that can manage a catalog of multimedia items. An entry in 
     - &#9745;save: saves the catalog to an external file (either as a text or binary, using object serialization);
     - &#9745;load: loads the catalog from an external file.
 - &#9745; The application will signal invalid data (year, path, etc.) using a custom exception.
+
+## Optional
+- &#9745; Create a shell that allows reading commands from the keyboard, together with their arguments.
+- &#9745; Represent the commands using classes instead of methods. Use an interface or an abstract class in order to desribe a generic command.
+Implement the commands add, list, save, load, play (create the classes AddCommand, ListCommand, etc.).
+- &#9745; Implement the command report: create (and open) an HTML report representing the content of the catalog.
+Use a template engine such as FreeMarker or Velocity, in order to create the HTML report.
+- &#9745; The application will signal the commands that are not valid using a custom exception.
+- &#9745; The final form of the application will be an executable JAR archive. Identify the generated archive and launch the application from the console, using the JAR.

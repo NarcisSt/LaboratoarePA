@@ -11,9 +11,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+/**
+ * The Catalog class contains a list of items, and the necessary methods for starting the program.
+ */
 public class Catalog {
     private List<BaseItem> items = new ArrayList<>();
 
+    /**
+     * Method that execute the wanted command.
+     *
+     * @param action the name of the action that is about to be executed (e.g. add, list,...)
+     * @param name the name of the item, where is necessary
+     * @param path the path to the item, where is necessary
+     * @throws IncorrectCommandException if the command doesn't exist
+     * @throws IncorrectPathException if the path is incorrect
+     */
     public void execute(String action, String name, String path) throws IncorrectCommandException, IncorrectPathException {
         switch (action) {
             case "add": {
@@ -56,11 +68,24 @@ public class Catalog {
         System.out.println("Command " + action + " was run successfully");
     }
 
+    /**
+     * Method that returns the item that hat the given name
+     *
+     * @param name the name of the item
+     * @return the item with the given name
+     */
     private BaseItem findByName(String name) {
         return items.stream()
                 .filter(d -> d.getName().equals(name)).findFirst().orElse(null);
     }
 
+    /**
+     * Method that starts the application.
+     *
+     * @throws IOException
+     * @throws IncorrectCommandException if the command doesn't exist
+     * @throws IncorrectPathException if the path is incorrect
+     */
     public void start() throws IOException, IncorrectCommandException, IncorrectPathException {
         System.out.println("Catalog is started!");
 
