@@ -24,3 +24,7 @@ Implement the commands add, list, save, load, play (create the classes AddComman
 Use a template engine such as FreeMarker or Velocity, in order to create the HTML report.
 - &#9745; The application will signal the commands that are not valid using a custom exception.
 - &#9745; The final form of the application will be an executable JAR archive. Identify the generated archive and launch the application from the console, using the JAR.
+
+Asa arata raportul:
+
+![img.png](img.png)
