@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 
+/**
+ * The ControlPanel class is used for managing the image being created
+ */
 public class ControlPanel extends JPanel {
     final MainFrame frame;
     JFileChooser fileChooser;

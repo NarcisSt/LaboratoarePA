@@ -9,6 +9,9 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+/**
+ * The DrawingPanel class is used for drawing various types of shapes
+ */
 public class DrawingPanel extends JPanel {
     final MainFrame frame;
     int width, height;
