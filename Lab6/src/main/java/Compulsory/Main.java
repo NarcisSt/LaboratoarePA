@@ -1,13 +1,9 @@
 package Compulsory;
 
-import javax.swing.*;
+import Compulsory.Panels.MainFrame;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("MainFrame");
-        frame.setContentPane(new MainFrame().getPanelMain());
-        frame.pack();
-        frame.setVisible(true);
+        new MainFrame().setVisible(true);
     }
-
 }
