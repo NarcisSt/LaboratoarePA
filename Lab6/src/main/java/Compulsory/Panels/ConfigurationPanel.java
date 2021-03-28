@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.regex.Pattern;
 
+/**
+ * The ConfigurationPanel class is used for introducing parameters regarding the shapes that will be drawn: the size, the number of sides
+ */
 public class ConfigurationPanel extends JPanel {
     final MainFrame frame;
     int size = 0;
