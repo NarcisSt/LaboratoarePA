@@ -1,7 +1,5 @@
 package Compulsory;
 
-import sun.security.krb5.internal.Ticket;
-
 import java.util.Random;
 
 /**
