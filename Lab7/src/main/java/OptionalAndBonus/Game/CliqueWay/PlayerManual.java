@@ -4,6 +4,9 @@ import OptionalAndBonus.Utils.Utils;
 
 import java.util.Scanner;
 
+/**
+ * This class represents the manual player that will play the game in clique way
+ */
 public class PlayerManual extends PlayerCliqueGame{
     public PlayerManual(CliqueGame game, String name) {
         super(game, name);
@@ -28,6 +31,11 @@ public class PlayerManual extends PlayerCliqueGame{
         verifyScore();
     }
 
+
+    /**
+     * Method that reads the edge that the player choose from standard input
+     * @return
+     */
     private int readEdgePosition() {
         Scanner scanner = new Scanner(System.in);
         int position = 0;

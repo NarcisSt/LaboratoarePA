@@ -1,5 +1,8 @@
 package OptionalAndBonus.Shell;
 
+/**
+ * The Command class represents the commands which can be: play, list or quit
+ */
 public class Command {
     private String command;
     private CommandEnum commandEnum;

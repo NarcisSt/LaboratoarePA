@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class describes the player that will plat the clique game
+ */
 public class PlayerCliqueGame extends Player {
     protected CliqueGame game;
     protected Graph graph;
@@ -18,6 +21,9 @@ public class PlayerCliqueGame extends Player {
         this.edges = new ArrayList<>();
     }
 
+    /**
+     * Prints to the standard input the best clique of this player
+     */
     public void printClique() {
         Clique clique = getMaximumClique();
         List<Integer> nodes = clique.getNodes();
@@ -36,6 +42,9 @@ public class PlayerCliqueGame extends Player {
         }
     }
 
+    /**
+     * Method that display the edges of the current player
+     */
     protected void printMyEdges() {
         for (int i = 0; i < edges.size(); ++i) {
             System.out.println(edges.get(i));
@@ -46,6 +55,9 @@ public class PlayerCliqueGame extends Player {
         System.out.println();
     }
 
+    /**
+     * Method that checks if the player has won the game
+     */
     protected void verifyScore() {
         int myScore = getScore();
 
@@ -69,6 +81,9 @@ public class PlayerCliqueGame extends Player {
         return getMaximumClique().getNodesCount();
     }
 
+    /**
+     * Method that returns the clique with the maximum number of nodes of this player
+     */
     private Clique getMaximumClique() {
         Clique clique = new Clique();
         Collections.sort(edges);
@@ -91,6 +106,11 @@ public class PlayerCliqueGame extends Player {
         return clique;
     }
 
+    /**
+     * Method that checks if the player's clique is formed by existent nodes
+     * @param nodes
+     * @return
+     */
     private boolean goodSubsetOfNodes(List<Integer> nodes) {
         for (int i = 0; i < nodes.size() - 1; i++) {
             for (int j = i + 1; j < nodes.size(); j++) {
@@ -103,6 +123,13 @@ public class PlayerCliqueGame extends Player {
         return true;
     }
 
+    /**
+     * Method that returns the position of the edge represented by firstNode and secondNode.
+     * It uses binary search
+     * @param firstNode
+     * @param secondNode
+     * @return
+     */
     private int binarySearchEdgePosition(Integer firstNode, Integer secondNode) {
         int left = 0;
         int right = edges.size() - 1;

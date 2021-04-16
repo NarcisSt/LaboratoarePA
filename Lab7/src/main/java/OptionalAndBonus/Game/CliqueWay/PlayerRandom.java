@@ -2,6 +2,9 @@ package OptionalAndBonus.Game.CliqueWay;
 
 import OptionalAndBonus.Utils.Utils;
 
+/**
+ * This class describes a random player that will choose the edges random
+ */
 public class PlayerRandom extends PlayerCliqueGame{
     public PlayerRandom(CliqueGame game, String name) {
         super(game, name);

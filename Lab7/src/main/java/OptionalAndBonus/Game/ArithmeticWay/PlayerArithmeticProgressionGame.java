@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * This class describes the player that will plat the arithmetic game
+ */
 public class PlayerArithmeticProgressionGame extends Player {
     protected ArithmeticProgressionGame game;
     protected List<Token> tokens;
@@ -18,6 +21,9 @@ public class PlayerArithmeticProgressionGame extends Player {
         this.tokens = new ArrayList<>();
     }
 
+    /**
+     * Prints to the standard input the best arithmetic progression of this player
+     */
     public void printArithmeticProgression() {
         ArithmeticProgression arithmeticProgression = getBestArithmeticProgression();
 
@@ -35,6 +41,9 @@ public class PlayerArithmeticProgressionGame extends Player {
         System.out.println();
     }
 
+    /**
+     * Method that prints the player's tokens
+     */
     public void printTokens() {
         for (int i = 0; i < tokens.size(); i++) {
             System.out.print(tokens.get(i).getValue());
@@ -45,6 +54,9 @@ public class PlayerArithmeticProgressionGame extends Player {
         System.out.println();
     }
 
+    /**
+     * Method that checks if the player has won the game
+     */
     protected void verifyScore() {
         int myScore = getScore();
         if (myScore == game.getK()) {
@@ -62,12 +74,19 @@ public class PlayerArithmeticProgressionGame extends Player {
 
     }
 
-
+    /**
+     * Returns the score of this player
+     * @return
+     */
     @Override
     public int getScore() {
         return getBestArithmeticProgression().getElementsCount();
     }
 
+    /**
+     * Method that computes the best arithmetic progression of this player
+     * @return
+     */
     private ArithmeticProgression getBestArithmeticProgression() {
         int tokensCount = tokens.size();
 

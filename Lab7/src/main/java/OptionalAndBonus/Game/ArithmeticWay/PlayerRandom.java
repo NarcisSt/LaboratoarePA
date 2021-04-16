@@ -2,6 +2,9 @@ package OptionalAndBonus.Game.ArithmeticWay;
 
 import OptionalAndBonus.Utils.Utils;
 
+/**
+ * This class describes a random player that will choose the tokens random
+ */
 public class PlayerRandom extends PlayerArithmeticProgressionGame{
 
     public PlayerRandom(ArithmeticProgressionGame game, String name) {

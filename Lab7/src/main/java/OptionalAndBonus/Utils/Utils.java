@@ -10,9 +10,19 @@ import OptionalAndBonus.Shell.Shell;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Class Utils contains methods that will help with the shell commands and the initialization of the game.
+ */
 public class Utils {
     private static Random random = new Random();
 
+    /**
+     * Method that generates a random integer between min and max
+     *
+     * @param min
+     * @param max
+     * @return
+     */
     public static int generateRandomInt(int min, int max) {
         if (min >= max) {
             return max;
@@ -20,6 +30,11 @@ public class Utils {
         return min + random.nextInt(max - min);
     }
 
+    /**
+     * Method that checks if a string given as parameter is a positive integer
+     * @param str
+     * @return
+     */
     public static boolean stringIsPositiveNat(String str) {
         if (str.length() > 9 || str.length() == 0) {
             return false;
@@ -32,6 +47,12 @@ public class Utils {
         return true;
     }
 
+    /**
+     * Method that is used by the shells and reads a line from the standard input
+     * @param scanner
+     * @param message
+     * @return the line
+     */
     public static String readLine(Scanner scanner, String message) {
         String line;
         while (true) {
@@ -47,6 +68,14 @@ public class Utils {
         return line.trim();
     }
 
+
+    /**
+     * Method that reads an option from the standard input, and prints a message
+     * @param scanner
+     * @param message
+     * @param options
+     * @return the option
+     */
     public static String readStringOption(Scanner scanner, String message, String[] options) {
         while (true) {
             System.out.print("Options: {");
@@ -68,6 +97,12 @@ public class Utils {
         }
     }
 
+    /**
+     * Method that reads a positive integer from the stdin, and prints a message
+     * @param scanner
+     * @param message
+     * @return the number
+     */
     public static int readIntOption(Scanner scanner, String message) {
         while (true) {
             System.out.print(message);
@@ -85,6 +120,12 @@ public class Utils {
         }
     }
 
+    /**
+     * Method that will execute the wanted command
+     * @param shell
+     * @param cmd
+     * @return true if the command was successfully executed, false otherwise
+     */
     public static boolean executeCommand(Shell shell, Command cmd) {
         switch (cmd.getCommandEnum()) {
             case PLAY: {
@@ -111,6 +152,10 @@ public class Utils {
         return true;
     }
 
+    /**
+     * Method that initialize the game by reading the desired parameters
+     * @return the game
+     */
     private static Game initializeGame() {
         Game game = null;
         Scanner scanner = new Scanner(System.in);
@@ -143,6 +188,12 @@ public class Utils {
         return game;
     }
 
+    /**
+     * Method that adds the players to the game, the number of players and their type
+     * @param game
+     * @param scanner
+     * @param gameName
+     */
     private static void initializePlayers(Game game, Scanner scanner, String gameName) {
         int numberOfPlayers = 0;
         while (true) {
@@ -166,6 +217,10 @@ public class Utils {
         }
     }
 
+    /**
+     * Method that initializes the shell.
+     * @return the shell
+     */
     public static Shell getShell() {
         Shell shell = new Shell();
 

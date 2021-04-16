@@ -9,6 +9,10 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class extends the abstract class Game and implements the methods.
+ * Basically, implements the arithmetic progression game
+ */
 public class ArithmeticProgressionGame extends Game {
     private Board board;
     private Daemon daemon;

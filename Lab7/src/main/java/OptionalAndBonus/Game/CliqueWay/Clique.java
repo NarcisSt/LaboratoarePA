@@ -3,6 +3,9 @@ package OptionalAndBonus.Game.CliqueWay;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Clique class represents a clique(a complete subgraph of a graph)
+ */
 public class Clique {
     private List<Integer> nodes;
 

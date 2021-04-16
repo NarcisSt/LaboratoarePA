@@ -4,6 +4,9 @@ import OptionalAndBonus.Utils.Utils;
 
 import java.util.Scanner;
 
+/**
+ * This class represents the manual player that will play the game in arithmetic way
+ */
 public class PlayerManual extends  PlayerArithmeticProgressionGame{
 
     public PlayerManual(ArithmeticProgressionGame game, String name) {
@@ -29,6 +32,11 @@ public class PlayerManual extends  PlayerArithmeticProgressionGame{
         verifyScore();
     }
 
+    /**
+     * Method that reads the token that the player choose from standard input
+     *
+     * @return
+     */
     private int readTokenPosition() {
         Scanner scanner = new Scanner(System.in);
         int position = 0;
