@@ -8,6 +8,11 @@ import java.util.List;
 public class Shell {
     private List<Command> commands = new ArrayList<>();
 
+    /**
+     * Method that returns the command that has to be executed
+     * @param command
+     * @return
+     */
     public Command getCommand(String command) {
         if (Utils.stringIsPositiveNat(command)) {
             int index = Integer.parseInt(command) - 1;
@@ -24,6 +29,10 @@ public class Shell {
         return null;
     }
 
+    /**
+     * Method that adds a command
+     * @param command
+     */
     public void addCommand(Command command) {
         commands.add(command);
     }

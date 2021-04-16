@@ -13,18 +13,31 @@ public class Board {
         }
     }
 
+    /**
+     * Returns the number of the remaining tokens
+     * @return
+     */
     public int getTokensCount() {
         synchronized (this) {
             return tokens.size();
         }
     }
 
+    /**
+     * Returns the token from position n
+     * @param n
+     * @return
+     */
     public Token getNthToken(int n) {
         synchronized (this) {
             return tokens.get(n);
         }
     }
 
+    /**
+     * Removes the given token from the board
+     * @param token
+     */
     public void removeToken(Token token) {
         synchronized (this) {
             int index = -1;
@@ -41,6 +54,11 @@ public class Board {
         }
     }
 
+    /**
+     * Mthod that uses the binary search to get the position of the token with the value given as parameter
+     * @param value
+     * @return
+     */
     public int getIndexOfTokenValue(int value) {
         int left = 0;
         int right = tokens.size() - 1;
@@ -59,6 +77,9 @@ public class Board {
         return -1;
     }
 
+    /**
+     * Displays the value of all the remaining tokens
+     */
     public void printTokens() {
         for (int i = 0; i < tokens.size(); i++) {
             System.out.print(tokens.get(i).getValue());

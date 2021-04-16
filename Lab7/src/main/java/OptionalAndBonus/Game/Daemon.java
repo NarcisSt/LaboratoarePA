@@ -1,7 +1,8 @@
 package OptionalAndBonus.Game;
 
-import lombok.SneakyThrows;
-
+/**
+ * The Daemon class sleeps for a given number of seconds, and stops the game after
+ */
 public class Daemon implements Runnable{
     private Game game;
     private int duration;

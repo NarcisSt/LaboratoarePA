@@ -1,5 +1,8 @@
 package OptionalAndBonus.Game.ArithmeticWay;
 
+/**
+ * Class ArithmeticProgression that contains the number of elements, the first element and the ratio.
+ */
 public class ArithmeticProgression {
     private int elementsCount;
     private int start;

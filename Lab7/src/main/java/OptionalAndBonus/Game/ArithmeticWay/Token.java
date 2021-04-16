@@ -1,5 +1,8 @@
 package OptionalAndBonus.Game.ArithmeticWay;
 
+/**
+ * The Token class implements the Comparable interface and describes the tokens from the table.
+ */
 public class Token implements Comparable{
     private int value;
 

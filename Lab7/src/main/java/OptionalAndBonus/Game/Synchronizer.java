@@ -2,6 +2,9 @@ package OptionalAndBonus.Game;
 
 import java.util.List;
 
+/**
+ * The Synchronizer class forces the thread to wait for players turn
+ */
 public class Synchronizer implements Runnable {
     private Game game;
     private Object[] locks;
@@ -12,6 +15,10 @@ public class Synchronizer implements Runnable {
         this.players = players;
     }
 
+    /**
+     * Method that iterates through the players, unlock their locks and then locks them again.
+     * Now we can be sure that only one thread is awake at a time.
+     */
     @Override
     public void run() {
         int currentPlayer = 0;
@@ -43,6 +50,9 @@ public class Synchronizer implements Runnable {
         unlockAllPlayers();
     }
 
+    /**
+     * Method the will unlock all players and notify that the game has ended
+     */
     private void unlockAllPlayers() {
         for (Object lock : this.locks) {
             synchronized (lock) {

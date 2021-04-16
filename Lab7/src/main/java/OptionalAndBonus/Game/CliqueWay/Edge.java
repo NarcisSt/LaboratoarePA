@@ -2,6 +2,9 @@ package OptionalAndBonus.Game.CliqueWay;
 
 import java.util.Objects;
 
+/**
+ * This class represents an edge of the graph.
+ */
 public class Edge implements Comparable {
     private int firstNode;
     private int secondNode;
@@ -34,10 +37,7 @@ public class Edge implements Comparable {
 
     @Override
     public String toString() {
-        return "Edge{" +
-                "firstNode=" + firstNode +
-                ", secondNode=" + secondNode +
-                '}';
+        return "{" + firstNode + ", " + secondNode + '}';
     }
 
     @Override

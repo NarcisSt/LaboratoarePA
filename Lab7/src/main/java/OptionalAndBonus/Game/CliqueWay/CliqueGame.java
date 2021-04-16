@@ -10,6 +10,10 @@ import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class extends the abstract class Game and implements the methods.
+ * Basically, implements the clique game
+ */
 public class CliqueGame extends Game {
     private Graph graph;
     private Daemon daemon;

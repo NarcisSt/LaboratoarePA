@@ -4,6 +4,10 @@ import OptionalAndBonus.Utils.Utils;
 
 import java.util.Collections;
 
+/**
+ * This class represents the smart player that will play the game in arithmetic way.
+ * This player always tries to increase his largest arithmetic progression.
+ */
 public class PlayerSmart extends PlayerArithmeticProgressionGame {
     public PlayerSmart(ArithmeticProgressionGame game, String name) {
         super(game, name);
@@ -27,18 +31,22 @@ public class PlayerSmart extends PlayerArithmeticProgressionGame {
         verifyScore();
     }
 
+    /**
+     * In this method, the smart player tries to extend its largest arithmetic progression
+     * @return
+     */
     private int getBestTokenPosition() {
         int maxPossibleScore = 0, tokenPosition = -1;
 
         Collections.sort(tokens);
 
-        for (int i = 0; i < tokens.size() - 1; ++i) {
-            for (int j = i + 1; j < tokens.size(); ++j) {
+        for (int i = 0; i < tokens.size() - 1; i++) {
+            for (int j = i + 1; j < tokens.size(); j++) {
                 int ratio = tokens.get(j).getValue() - tokens.get(i).getValue();
                 int next = tokens.get(j).getValue() + ratio;
                 int currentScore = 2;
 
-                for (int k = j + 1; k < tokens.size(); ++k) {
+                for (int k = j + 1; k < tokens.size(); k++) {
                     if (tokens.get(k).getValue() == next) {
                         ++currentScore;
                         next += ratio;
