@@ -17,7 +17,7 @@ public class PlayerRandom extends PlayerCliqueGame{
             return;
         }
         System.out.println(name + "'s turn. Random player.");
-        Edge myEdge = graph.getNthEdge(Utils.generateRandomInt(0, edgesCount - 1));
+        Edge myEdge = graph.getNthEdge(CompulsoryOptionalBonus.Utils.generateRandomInt(0, edgesCount - 1));
         graph.removeEdge(myEdge);
         edges.add(myEdge);
 

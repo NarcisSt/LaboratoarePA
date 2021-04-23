@@ -41,7 +41,7 @@ public class PlayerManual extends  PlayerArithmeticProgressionGame{
         Scanner scanner = new Scanner(System.in);
         int position = 0;
         while (true) {
-            int token = Utils.readIntOption(scanner, "Choose a token: ");
+            int token = CompulsoryOptionalBonus.Utils.readIntOption(scanner, "Choose a token: ");
             position = board.getIndexOfTokenValue(token);
             if (position == -1) {
                 System.out.println("Wrong token!");

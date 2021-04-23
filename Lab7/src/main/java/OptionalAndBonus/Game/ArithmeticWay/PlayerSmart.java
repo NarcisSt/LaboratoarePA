@@ -22,7 +22,7 @@ public class PlayerSmart extends PlayerArithmeticProgressionGame {
         System.out.println(name + "'s turn. Smart player.");
         int tokenPosition = getBestTokenPosition();
         if (tokenPosition == -1) {
-            tokenPosition = Utils.generateRandomInt(0, board.getTokensCount());
+            tokenPosition = CompulsoryOptionalBonus.Utils.generateRandomInt(0, board.getTokensCount());
         }
         Token token = board.getNthToken(tokenPosition);
         tokens.add(token);

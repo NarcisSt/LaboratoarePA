@@ -1,9 +1,8 @@
-package OptionalAndBonus.Shell;
+package CompulsoryOptionalBonus.Shell;
 
-import OptionalAndBonus.Utils.Utils;
+import CompulsoryOptionalBonus.Utils.Utils;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Shell {
     private List<Command> commands = new ArrayList<>();
@@ -14,7 +13,7 @@ public class Shell {
      * @return
      */
     public Command getCommand(String command) {
-        if (CompulsoryOptionalBonus.Utils.stringIsPositiveNat(command)) {
+        if (Utils.stringIsPositiveNat(command)) {
             int index = Integer.parseInt(command) - 1;
             if (index >= 0 && index < commands.size()) {
                 return commands.get(index);

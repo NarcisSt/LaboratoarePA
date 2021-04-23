@@ -40,8 +40,8 @@ public class PlayerManual extends PlayerCliqueGame{
         Scanner scanner = new Scanner(System.in);
         int position = 0;
         while (true) {
-            int firstNode = Utils.readIntOption(scanner, "Enter the first node: ");
-            int secondNode = Utils.readIntOption(scanner, "Enter the second node: ");
+            int firstNode = CompulsoryOptionalBonus.Utils.readIntOption(scanner, "Enter the first node: ");
+            int secondNode = CompulsoryOptionalBonus.Utils.readIntOption(scanner, "Enter the second node: ");
             position = graph.getPositionOfEdge(firstNode, secondNode);
             if (position == -1) {
                 System.out.println("Wrong edge!");

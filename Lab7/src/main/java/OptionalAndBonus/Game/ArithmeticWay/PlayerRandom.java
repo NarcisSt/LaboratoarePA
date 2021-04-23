@@ -18,7 +18,7 @@ public class PlayerRandom extends PlayerArithmeticProgressionGame{
             return;
         }
         System.out.println(name + "'s turn. Random player.");
-        Token myToken = board.getNthToken(Utils.generateRandomInt(0, tokensCount - 1));
+        Token myToken = board.getNthToken(CompulsoryOptionalBonus.Utils.generateRandomInt(0, tokensCount - 1));
         board.removeToken(myToken);
         tokens.add(myToken);
 
