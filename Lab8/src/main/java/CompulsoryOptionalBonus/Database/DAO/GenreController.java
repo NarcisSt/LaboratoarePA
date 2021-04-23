@@ -19,6 +19,12 @@ public class GenreController {
         connection = database.getConnection();
     }
 
+    /**
+     * Method that will create a new genre
+     * @param name
+     * @return
+     * @throws GenreCreationFailedException
+     */
     public Genre create(String name) throws GenreCreationFailedException {
         int id = createDB(name);
         if (id == -1) {
@@ -35,16 +41,30 @@ public class GenreController {
         return findByMovieIdDB(movieId);
     }
 
+    /**
+     * Method that returns a list of genres, each of them having movies_id = 'artistId'
+     * @param movieId
+     * @return
+     */
     private List<Genre> findByMovieIdDB(int movieId) {
         String query = "SELECT * FROM genres WHERE movies_id = " + movieId;
         return findByQuery(query);
     }
 
+    /**
+     * Method that returns a list that contains all the genres from the database
+     * @return
+     */
     private List<Genre> findAllDB() {
         String query = "SELECT * FROM genres";
         return findByQuery(query);
     }
 
+    /**
+     * Method that returns a list of albums from the database
+     * @param query
+     * @return
+     */
     private List<Genre> findByQuery(String query) {
         List<Genre> genres = new ArrayList<>();
         ResultSet resultSet = null;
@@ -76,6 +96,11 @@ public class GenreController {
         }
     }
 
+    /**
+     * Method that inserts a new genre in the database
+     * @param name
+     * @return its id
+     */
     private int createDB(String name) {
         int id = -1;
         String query = "INSERT INTO genres (name) VALUES (?)";
@@ -104,6 +129,5 @@ public class GenreController {
             }
             return id;
         }
-    }
     }
 }

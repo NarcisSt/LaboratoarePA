@@ -1,5 +1,8 @@
 package CompulsoryOptionalBonus.Model;
 
+/**
+ * The Genre class represents the prototype of a genre
+ */
 public class Genre {
     private int id;
     private String name;

@@ -20,7 +20,7 @@ public class MovieController {
         connection = database.getConnection();
     }
 
-    public Movie create(String title, int releaseYear, int duration, int score) throws MovieCreationFailedException {
+    public static Movie create(String title, int releaseYear, int duration, int score) throws MovieCreationFailedException {
         int id = createDB(title, releaseYear, duration, score);
         if (id == -1) {
             throw new MovieCreationFailedException(title, releaseYear);
@@ -40,6 +40,11 @@ public class MovieController {
         return movie;
     }
 
+    /**
+     * Method that returns the movie wit the title = 'title'
+     * @param title
+     * @return
+     */
     private Movie findByTitleDB(String title) {
         Movie movie = null;
         String query = "SELECT * FROM movies WHERE UPPER(title) = UPPER(?)";
@@ -74,6 +79,10 @@ public class MovieController {
     }
 
 
+    /**
+     * Method that returns all movies from the database
+     * @return
+     */
     private List<Movie> findAllDB() {
         List<Movie> movies = new ArrayList<>();
         String query = "SELECT * FROM movies";
@@ -110,6 +119,14 @@ public class MovieController {
         }
     }
 
+    /**
+     * Method that inserts a movie in the database
+     * @param title
+     * @param releaseYear
+     * @param duration
+     * @param score
+     * @return
+     */
     private int createDB(String title, int releaseYear, int duration, int score) {
         int id = -1;
         String query = "INSERT INTO movies (title, release_year, duration, score) VALUES (?, ?, ?, ?)";

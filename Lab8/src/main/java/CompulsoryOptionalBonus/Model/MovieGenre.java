@@ -1,5 +1,8 @@
 package CompulsoryOptionalBonus.Model;
 
+/**
+ * The MovieGenre class represents the prototype of the link between a movies and genres
+ */
 public class MovieGenre {
     private int id;
     private int movieId;

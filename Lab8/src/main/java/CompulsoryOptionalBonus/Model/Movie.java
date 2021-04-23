@@ -2,6 +2,9 @@ package CompulsoryOptionalBonus.Model;
 
 import java.util.Objects;
 
+/**
+ * The Movie class represents the prototype of a movie
+ */
 public class Movie {
     private int id;
     private String name;
