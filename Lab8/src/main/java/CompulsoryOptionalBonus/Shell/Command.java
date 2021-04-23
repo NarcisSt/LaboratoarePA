@@ -1,7 +1,7 @@
 package CompulsoryOptionalBonus.Shell;
 
 /**
- * The Command class represents the commands which can be: ...
+ * The Command class represents the commands which can be: COMPULSORY, REPORT, CONCURRENT_SINGLETON, CONCURRENT_CONN_POOL, LIST, QUIT
  */
 public class Command {
     private String command;

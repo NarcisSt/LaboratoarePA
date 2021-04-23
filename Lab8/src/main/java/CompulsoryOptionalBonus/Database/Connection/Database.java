@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/**
+ * This is a singleton class which returns a connection to the database
+ */
 public class Database implements AutoCloseable{
     private static Database instance = null;
     private Connection connection = null;

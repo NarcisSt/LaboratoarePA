@@ -1,5 +1,8 @@
 package CompulsoryOptionalBonus.Model;
 
+/**
+ * The Actor class represents the prototype of an actor
+ */
 public class Actor {
     private int id;
     private String name;

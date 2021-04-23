@@ -6,6 +6,9 @@ import com.zaxxer.hikari.HikariDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+/**
+ * This class manages a connection pool
+ */
 public class DataSource {
     private static HikariConfig config = new HikariConfig();
     private static HikariDataSource dataSource;

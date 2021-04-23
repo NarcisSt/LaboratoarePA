@@ -51,18 +51,18 @@ javac -d "classes" Matrix.java
 javac -d "classes" Node.java
 javac -d "classes" -classpath "classes" Graph.java
 javac -d "classes" -classpath "classes" Tree.java
-javac -d "classes" -classpath "classes" Main.java
+javac -d "classes" -classpath "classes" CompulsoryOptionalBonus.Main.java
 ```
 
 ### Execute
 ```bash
-java -classpath "classes" OptionalAndBonus.Main 4
-java -Xms4G -Xmx4G -classpath "classes" OptionalAndBonus.Main 30000
+java -classpath "classes" OptionalAndBonus.CompulsoryOptionalBonus.Main 4
+java -Xms4G -Xmx4G -classpath "classes" OptionalAndBonus.CompulsoryOptionalBonus.Main 30000
 ```
 
 ### Example
 ```bash
-java -classpath "classes" OptionalAndBonus.Main 4
+java -classpath "classes" OptionalAndBonus.CompulsoryOptionalBonus.Main 4
 
 The adjacency matrix of the graph:
 0 0 1 1
