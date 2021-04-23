@@ -11,7 +11,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Class Utils contains methods that will help with the shell commands and the initialization of the game.
+ * Class CompulsoryOptionalBonus.Utils contains methods that will help with the shell commands and the initialization of the game.
  */
 public class Utils {
     private static Random random = new Random();
