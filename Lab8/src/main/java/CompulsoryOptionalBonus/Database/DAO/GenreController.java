@@ -5,6 +5,7 @@ import CompulsoryOptionalBonus.Exceptions.GenreCreationFailedException;
 import CompulsoryOptionalBonus.Model.Genre;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class GenreController {
@@ -45,7 +46,34 @@ public class GenreController {
     }
 
     private List<Genre> findByQuery(String query) {
+        List<Genre> genres = new ArrayList<>();
+        ResultSet resultSet = null;
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery(query);
 
+            if (resultSet != null) {
+                while (resultSet.next()) {
+                    Genre genre = new Genre(resultSet.getInt("id"), resultSet.getString("name"));
+                    genres.add(genre);
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (resultSet != null) {
+                    resultSet.close();
+                }
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (SQLException ignored) {
+
+            }
+            return genres;
+        }
     }
 
     private int createDB(String name) {
