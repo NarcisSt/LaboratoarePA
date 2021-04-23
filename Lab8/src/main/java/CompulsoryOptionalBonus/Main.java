@@ -18,7 +18,7 @@ public class Main {
 
         boolean running = true;
         while (running) {
-            String line = Utils.readLine(scanner, "shell>");
+            String line = Utils.readLine(scanner, "shell>>");
             String[] cmdArgs = line.split(" ", 2);
             Command cmd = shell.getCommand(cmdArgs[0]);
 
