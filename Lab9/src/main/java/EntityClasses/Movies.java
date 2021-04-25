@@ -81,20 +81,4 @@ public class Movies implements Serializable {
         this.score = score;
     }
 
-    public String getID() {
-        return this.ID;
-    }
-
-    public String getTITLE() {
-        return this.TITLE;
-    }
-
-    public String getDURATION() {
-        return this.DURATION;
-    }
-
-    public String getSCORE() {
-        return this.SCORE;
-    }
-
 }

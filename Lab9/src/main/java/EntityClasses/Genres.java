@@ -3,16 +3,21 @@ package EntityClasses;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Accessors(chain = true)
 @Data
 @Entity
 @Table(name = "GENRES")
+@NamedQueries({
+        @NamedQuery(name = "Genres.findById",
+                query = "SELECT g FROM Genres g WHERE g.ID=:id"),
+        @NamedQuery(name = "Genres.findByName",
+                query = "SELECT g FROM Genres g WHERE g.NAME=:NAME"),
+        @NamedQuery(name = "Genres.create",
+                query = "INSERT INTO Genres g (g.ID, g.NAME) VALUES(:id, :name)")
+})
 public class Genres implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
@@ -46,21 +51,4 @@ public class Genres implements Serializable {
         this.name = name;
     }
 
-    public String getID() {
-        return this.ID;
-    }
-
-    public String getNAME() {
-        return this.NAME;
-    }
-
-    public Genres setID(String ID) {
-        this.ID = ID;
-        return this;
-    }
-
-    public Genres setNAME(String NAME) {
-        this.NAME = NAME;
-        return this;
-    }
 }
