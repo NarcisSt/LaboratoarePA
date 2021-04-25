@@ -1,4 +1,4 @@
-package Compulsory;
+package EntityClasses;
 
 /**
  * @author Barat Narcis Stefan

@@ -1,4 +1,4 @@
-package Compulsory;
+package EntityClasses;
 
 import java.lang.*;
 import java.util.ArrayList;
