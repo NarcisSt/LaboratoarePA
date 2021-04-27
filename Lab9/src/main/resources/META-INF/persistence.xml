@@ -12,11 +12,11 @@
         <class>CompulsoryLab9.EntityClasses.Associate</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:maria" />
-            <property name="javax.persistence.jdbc.user" value="maria" />
-            <property name="javax.persistence.jdbc.password" value="maria" />
-            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
-            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle8iDialect" />
+            <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:XE" />
+            <property name="hibernate.connection.username" value="maria" />
+            <property name="hibernate.connection.password" value="maria" />
+            <property name="hibernate.connection.driver" value="oracle.jdbc.driver.OracleDriver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect" />
         </properties>
     </persistence-unit>
 </persistence>
