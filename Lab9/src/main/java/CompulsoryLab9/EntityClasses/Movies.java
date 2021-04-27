@@ -1,23 +1,29 @@
-package EntityClasses;
+package CompulsoryLab9.EntityClasses;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import lombok.experimental.Accessors;
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
 import java.sql.Date;
 
-@lombok.experimental.Accessors(chain = true)
-@lombok.Data
+@Accessors(chain = true)
+@Data
+@ToString
+@EqualsAndHashCode
 @Entity
 @Table(name = "MOVIES")
-public class Movies implements Serializable {
-    private static final long serialVersionUID = 1L;
-    @Id
-    @Column(name = "ID", nullable = false)
-    private String ID;
-    @Column(name = "TITLE")
-    private String TITLE;
+@NamedQueries({
+        @NamedQuery(name = "Movies.findByName",
+                query = "SELECT m FROM Movies m WHERE m.name = :name")
+})
+public class Movies {
     @Id
     @Column(name = "ID")
     private Long id;
@@ -27,10 +33,6 @@ public class Movies implements Serializable {
 
     @Column(name = "RELEASE_DATE")
     private Date releaseDate;
-    @Column(name = "DURATION")
-    private String DURATION;
-    @Column(name = "SCORE")
-    private String SCORE;
 
     @Column(name = "DURATION")
     private Long duration;
@@ -38,7 +40,15 @@ public class Movies implements Serializable {
     @Column(name = "SCORE")
     private Long score;
 
+    public Movies(Long id, String title, Long duration, Long score) {
+        this.id = id;
+        this.title = title;
+        this.duration = duration;
+        this.score = score;
+    }
+
     public Movies() {
+
     }
 
     public Long getId() {

@@ -5,19 +5,18 @@
              version="2.2">
 
     <persistence-unit name="lab9-persistence" transaction-type="RESOURCE_LOCAL">
-        <description>Hibernate Tips</description>
-        <class>EntityClasses.Movies</class>
-        <class>EntityClasses.Genres</class>
-        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <class>CompulsoryLab9.EntityClasses.Movies</class>
+        <class>CompulsoryLab9.EntityClasses.Genres</class>
+        <class>CompulsoryLab9.EntityClasses.Associate</class>
 
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:dbname" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:maria" />
             <property name="javax.persistence.jdbc.user" value="maria" />
             <property name="javax.persistence.jdbc.password" value="maria" />
             <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle8iDialect" />
         </properties>
-
     </persistence-unit>
 </persistence>
