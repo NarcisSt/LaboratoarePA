@@ -25,6 +25,5 @@ public class MainLab9 {
         System.out.println(moviesRepo.findMovieByName("Miami Beach"));
         System.out.println(moviesRepo.findMovieById((long)1));
 
-
     }
 }

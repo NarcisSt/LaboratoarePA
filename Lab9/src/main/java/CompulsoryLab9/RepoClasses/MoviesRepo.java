@@ -5,6 +5,9 @@ import CompulsoryLab9.Singleton.PersistenceManager;
 
 import javax.persistence.EntityManager;
 
+/**
+ * Repository class for Movies, we can create new record in DB and find movie by name and by Id
+ */
 public class MoviesRepo {
     public void create (Movies movies) {
         EntityManager entityManager = PersistenceManager.INSTANCE.getEntityManager();

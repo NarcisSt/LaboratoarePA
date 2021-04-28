@@ -4,13 +4,17 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+/**
+ * Singleton class using Enum. We create one instance for EntityManagerFactory then use it for creating EntityManager object
+ */
 public enum PersistenceManager {
     INSTANCE;
 
     private EntityManagerFactory emf = null;
 
     PersistenceManager() {
-        emf = Persistence.createEntityManagerFactory("lab9-persistence");
+        if(emf == null)
+            emf = Persistence.createEntityManagerFactory("lab9-persistence");
     }
 
     public EntityManagerFactory getEntityManagerFactory() {

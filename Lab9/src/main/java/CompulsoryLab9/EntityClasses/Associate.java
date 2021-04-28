@@ -4,6 +4,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "ASSOCIATE")
+/**
+ * Associate class as Entity imported from our OracleDB
+ */
 public class Associate {
     @Column(name = "ID_MOVIE")
     private Long idMovie;

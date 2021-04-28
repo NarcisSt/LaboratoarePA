@@ -23,6 +23,9 @@ import java.sql.Date;
         @NamedQuery(name = "Movies.findByName",
                 query = "SELECT m FROM Movies m WHERE m.name = :name")
 })
+/**
+ * Movies class as Entity imported from our OracleDB
+ */
 public class Movies {
     @Id
     @Column(name = "ID")

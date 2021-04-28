@@ -5,6 +5,9 @@ import CompulsoryLab9.Singleton.PersistenceManager;
 
 import javax.persistence.EntityManager;
 
+/**
+ * Repository class for Genres, we can create new record in DB and find genre by name
+ */
 public class GenresRepo {
     public Genres findGenreByName(String name) {
         EntityManager entityManager = PersistenceManager.INSTANCE.getEntityManager();

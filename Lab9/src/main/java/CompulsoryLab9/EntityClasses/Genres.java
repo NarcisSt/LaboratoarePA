@@ -13,6 +13,9 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "GENRES")
+/**
+ * Genres class as Entity imported from our OracleDB
+ */
 public class Genres {
     @Id
     @Column(name = "ID", nullable = false)
