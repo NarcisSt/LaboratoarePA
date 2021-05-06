@@ -1,13 +1,36 @@
 package optional;
 
+import compulsory.EntityClasses.Genres;
+import compulsory.EntityClasses.Movies;
+import optional.jdbc.DataBaseConnection;
+import optional.jdbc.GenresFactory;
 
-import CompulsoryLab9.EntityClasses.Genres;
-import CompulsoryLab9.EntityClasses.Movies;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Main2 {
-    AbstractRepository<Genres>genresRepository = new AbstractRepository<>();
-    Genres gen1 = genresRepository.create(new Genres((long) 6, "Fantasy"));
+    public static void main(String[] args) throws SQLException {
 
-    AbstractRepository<Movies>moviesRepository = new AbstractRepository<>();
-    Movies movie1 = moviesRepository.findById((long) 1);
+        Scanner in = new Scanner(System.in);
+        System.out.println("How you want db, JDBC/JPA? (1/2)");
+        int model = in.nextInt();
+        if(model == 1){
+            Connection connection = DataBaseConnection.getInstance().getConnection();
+            GenresFactory gf = new GenresFactory(connection);
+            gf.create(new Genres("7", "Thriller"));
+            connection.close();
+        }
+        else{
+            AbstractRepository<Genres>genresRepository = new AbstractRepository<>();
+            Genres gen1 = genresRepository.create(new Genres("7", "Fantasy"));
+
+            AbstractRepository<Movies>moviesRepository = new AbstractRepository<>();
+           // Movies movie1 = moviesRepository.findById("2");
+
+        }
+
+
+    }
+
 }

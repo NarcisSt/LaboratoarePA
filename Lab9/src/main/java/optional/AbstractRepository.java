@@ -1,6 +1,6 @@
 package optional;
 
-import CompulsoryLab9.Singleton.PersistenceManager;
+import compulsory.Singleton.PersistenceManager;
 
 import javax.persistence.EntityManager;
 
@@ -19,10 +19,10 @@ public class AbstractRepository<S>{
 
         return entity; //returns the saved entity
     }
-
-    public S findById(long id){
+/*
+    public S findById(String id){
         EntityManager entityManager = PersistenceManager.INSTANCE.getEntityManager();
-        return (S)entityManager.createQuery("SELECT e FROM S e WHERE e.id=?1").setParameter(1, id).getSingleResult();
+        return (S)entityManager.createQuery("SELECT e FROM ?1 e WHERE e.id=?2").setParameter(1, S).setParameter(2, id).getSingleResult();
     }
-
+*/
 }

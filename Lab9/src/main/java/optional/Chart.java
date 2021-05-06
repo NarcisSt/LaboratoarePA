@@ -1,6 +1,6 @@
 package optional;
 
-import CompulsoryLab9.EntityClasses.Movies;
+import compulsory.EntityClasses.Movies;
 import lombok.Data;
 
 import java.util.Date;
