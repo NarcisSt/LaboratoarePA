@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class ClientThread extends Thread {
     private Socket socket;
@@ -16,12 +17,16 @@ public class ClientThread extends Thread {
     public void run() {
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            String request = in.readLine();
+            while(true){
+                String request = in.readLine();
 
-            PrintWriter out = new PrintWriter(socket.getOutputStream());
-            String raspuns = "Hello " + request + "!";
-            out.println(raspuns);
-            out.flush();
+                PrintWriter out = new PrintWriter(socket.getOutputStream());
+                String raspuns = "Hello " + request + "!";
+                out.println(raspuns);
+                out.flush();
+            }
+
+
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

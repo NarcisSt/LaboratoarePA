@@ -8,12 +8,12 @@ public class Server {
     public static final int PORT = 8100;
 
     public Server() {
-        ServerSocket Ssocket = null;
-        try{
-            Ssocket = new ServerSocket(PORT);
+        ServerSocket sSocket;
+        try {
+            sSocket = new ServerSocket(PORT);
             while (true) {
-                System.out.println ("Waiting for a client ...");
-                Socket socket = Ssocket.accept();
+                System.out.println("Waiting for a client ...");
+                Socket socket = sSocket.accept();
                 // Execute the client's request in a new thread
                 new ClientThread(socket).start();
             }
@@ -23,7 +23,5 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) {
-        Server server = new Server();
-    }
+    public static void main(String[] args) { new Server(); }
 }

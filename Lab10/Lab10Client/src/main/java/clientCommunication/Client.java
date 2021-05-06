@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
@@ -14,14 +15,18 @@ public class Client {
         try (
                 Socket socket = new Socket(serverAddress, PORT);
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                BufferedReader in = new BufferedReader (
-                        new InputStreamReader(socket.getInputStream())) ) {
+                BufferedReader in = new BufferedReader (new InputStreamReader(socket.getInputStream()))) {
             // Send a request to the server
-            String request = "World";
-            out.println(request);
-            // Wait the response from the server ("Hello World!")
-            String response = in.readLine ();
-            System.out.println(response);
+
+            Scanner scan = new Scanner(System.in);
+            String command;
+            do{
+                System.out.println("\n New Command:");
+                command = scan.nextLine();
+                out.println(command);
+                String response = in.readLine();
+                System.out.println(response);
+            } while(command.equalsIgnoreCase("exit"));
         } catch (UnknownHostException e) {
             System.err.println("No server listening... " + e);
         } catch (IOException e) {
