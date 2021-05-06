@@ -1,5 +1,7 @@
 package serverCommunication;
 
+import lombok.EqualsAndHashCode;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -8,7 +10,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-
+@EqualsAndHashCode
 public class Server {
     public static final int PORT = 8100;
     protected ServerSocket sSocket;
@@ -29,5 +31,6 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) { new Server(); }
+    public static void main(String[] args) {
+        Server server = new Server(); }
 }

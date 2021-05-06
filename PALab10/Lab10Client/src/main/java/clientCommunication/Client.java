@@ -14,19 +14,25 @@ public class Client {
         int PORT = 8100; // The server's port
         try (
                 Socket socket = new Socket(serverAddress, PORT);
-                PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), false);
                 BufferedReader in = new BufferedReader (new InputStreamReader(socket.getInputStream()))) {
             // Send a request to the server
 
             Scanner scan = new Scanner(System.in);
             String command;
             do{
-                System.out.println("\n New Command:");
+                System.out.println("\nNew Command:");
                 command = scan.nextLine();
-                out.println(command);
-                String response = in.readLine();
-                System.out.println(response);
-            } while(command.equalsIgnoreCase("exit"));
+                if(command.equalsIgnoreCase("read")){
+                    out.flush();
+                }
+                else{
+                    out.println(command);
+                    String response = in.readLine();
+                    System.out.println(response);
+                }
+            } while(!command.equalsIgnoreCase("exit"));
+
         } catch (UnknownHostException e) {
             System.err.println("No server listening... " + e);
         } catch (IOException e) {

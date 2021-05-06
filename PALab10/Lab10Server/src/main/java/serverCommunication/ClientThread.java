@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class ClientThread extends Thread {
     private Socket socket;
@@ -77,12 +76,15 @@ public class ClientThread extends Thread {
                     }
                     break;
                 case "friend":
+
                     break;
                 case "send":
                     break;
-                case "read":
-                    break;
                 default:
+                    String raspuns = "Unknown command! Try again!!";
+                    PrintWriter out = new PrintWriter(socket.getOutputStream());
+                    out.println(raspuns);
+                    out.flush();
             }
         } catch (IOException e) {
             e.printStackTrace();
