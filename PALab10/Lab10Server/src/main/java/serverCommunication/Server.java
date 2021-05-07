@@ -5,17 +5,16 @@ import lombok.EqualsAndHashCode;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @EqualsAndHashCode
 public class Server {
     public static final int PORT = 8100;
     protected ServerSocket sSocket;
-    protected List<String> people = new LinkedList<>();
-    protected Map<String,List<String>> friendship = new HashMap<>();
+    protected List<String> users = new LinkedList<>();
+    protected Map<Socket, String> login = new HashMap<>();
+    protected Map<String, Set<String>> friendship = new HashMap<>();
+
     public Server() {
         try {
             sSocket = new ServerSocket(PORT);
@@ -24,6 +23,7 @@ public class Server {
                 Socket socket = sSocket.accept();
                 // Execute the client's request in a new thread
                 new ClientThread(socket, this).start();
+
             }
 
         } catch (IOException e) {
@@ -32,5 +32,6 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        Server server = new Server(); }
+        Server server = new Server();
+    }
 }
