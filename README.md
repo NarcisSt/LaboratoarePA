@@ -10,3 +10,4 @@
 - Lab 7 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab7)
 - Lab 8 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab8)
 - Lab 9 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab9)
+- Lab 10 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/PALab10)
