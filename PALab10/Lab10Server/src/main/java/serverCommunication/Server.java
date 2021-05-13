@@ -21,6 +21,7 @@ public class Server {
             while (true) {
                 System.out.println("Waiting for a client ...");
                 Socket socket = sSocket.accept();
+                socket.setSoTimeout(10 * 1000);
                 // Execute the client's request in a new thread
                 new ClientThread(socket, this).start();
 
