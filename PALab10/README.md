@@ -31,7 +31,7 @@ The main specifications of the application are:
 - &#9744;  the HTML representation directly from the application to a Web server. You may use JCraft for connecting to a server using SFTP and transferring a file (or a similar solution).
 
 ## Bonus
-- &#9744; Implement an algorithm to determine the structural cohesion of the network.
+- &#9745; Implement an algorithm to determine the structural cohesion of the network.
 - &#9744; Rewrite the application so it can act both as a server or a client, depending on circumstances.
 Suppose that the clients (agents) are inside an intranet and their IP addresses are known (or within a known limited range).
 Implement a leader election algorithm such that, if the server (the coordinator agent) fails, one of the other agents "elects" itself as the coordinator of the network and the communication can still continue.
