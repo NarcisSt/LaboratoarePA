@@ -1,5 +1,6 @@
 package serverCommunication;
 
+import coloring.Greedy;
 import lombok.EqualsAndHashCode;
 
 import java.io.BufferedReader;
@@ -107,6 +108,12 @@ public class ClientThread extends Thread {
                     server.login.remove(this.socket);
                     sendMessage(out, "User disconnected");
                     socket.shutdownOutput();
+                    break;
+                case "cohesion":
+                    Greedy greedyColoring = new Greedy(server.friendship);
+                    int minim = greedyColoring.minimColor();
+                    sendMessage(out, "Minim users to delete to create more than 1 connected components is " + minim);
+                    break;
                 default:
                     sendMessage(out, "Unknown command! Try again!!");
             }
