@@ -11,3 +11,6 @@
 - Lab 8 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab8)
 - Lab 9 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab9)
 - Lab 10 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/PALab10)
+- Lab 11 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab11)
+- Lab 12 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab12)
+- Lab 13 [visit here](https://github.com/NarcisSt/LaboratoarePA/tree/main/Lab13)

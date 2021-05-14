@@ -26,3 +26,10 @@ The main specifications of the application are:
 - &#9745; Implement both the JDBC and JPA implementations and use an AbstractFactory in order to create the DAO objects (the repositories).
 - &#9745; The application will use JDBC or JPA depending on a parameter given in an initialization file. (At least for one entity!)
 
+## Bonus
+
+- &#9744; We say that two movies are related if they have the same director (for example). Each day you want to see exactly two movies and you want to create the longest possible playlist that satisfies the following constraints:
+  - each day you will watch two related movies;
+  - any two movies from different days cannot be related; 
+- &#9744; Implement an efficient algorithm (for a bonus+) or use one from a third-party library, like JGraphT.
+- &#9744; Test your algorithm for large subsets of movies from your database and describe the runtime performance in a suggestive manner.
